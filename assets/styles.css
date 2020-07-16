@@ -1,2 +1,6 @@
-.style {
-  background-color: red; }
+#pnl-toggler {
+  margin: auto;
+  display: flex; }
+
+#trading-order-container.elem-floating {
+  top: 0 !important; }
