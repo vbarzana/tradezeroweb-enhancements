@@ -1,0 +1,36 @@
+{
+  "name": "tradezeroweb-enhancements",
+  "author": "Victor Antonio Barzana Crespo <viticoinf@gmail.com>",
+  "version": "1.0",
+  "description": "This small tool once installed would allow to enhance the performance of tradezero web free by injecting itself into the platform and improving it's behavior",
+
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "tabs",
+    "https://standard.tradezeroweb.co/*"
+  ],
+  "background": {
+    "scripts": ["assets/jquery-3.3.1.min.js", "index.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://standard.tradezeroweb.co/*"],
+      "css": ["assets/newprofitly.css"],
+      "js": ["assets/jquery-3.3.1.min.js", "index.js"]
+    }
+  ],
+
+  "page_action": {
+    "default_icon": {
+      "48": "assets/images/logo.png"
+    }
+  },
+
+  "icons": {
+    "48": "assets/images/logo.png"
+  },
+  "manifest_version": 2
+}

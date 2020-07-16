@@ -1,0 +1,131 @@
+$red-color: red;
+$green-color: #49a53d;
+$header-background: white;
+$border-color: #e6e6e6;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin trade-post-header($header-text-color, $arrow-type, $header-background-color: $header-background, $header-border-color: $border-color) {
+  background-color: $header-background-color !important;
+  border: 1px solid $header-border-color;
+  border-bottom: 0;
+  @include border-radius(0 0 6px 6px);
+
+  .text-white {
+    color: $header-text-color !important;
+  }
+  .trade-type {
+    color: $header-text-color;
+    display: none;
+    float: right;
+  }
+}
+
+.content {
+  .card-header.bg-danger {
+    @include trade-post-header($red-color, "\f063");
+  }
+
+  .card-header.bg-profitGreen {
+    @include trade-post-header($green-color, "\f062");
+  }
+}
+
+.container.feeds {
+  padding-top: 3px;
+  @include border-radius(6px 6px 0 0);
+  .trade-detail {
+    padding-top: 5px;
+    width: 60%;
+    bottom: -16px;
+    right: 0 !important;
+    margin: 0 !important;
+    float: right;
+  }
+
+  .trade-comment-detail {
+    padding-top: 5px;
+  }
+
+  .trade-feed-body {
+    margin-left: 0;
+  }
+
+  .col-12 section .a-green {
+    display: none;
+  }
+  section .text-muted {
+    float: left;
+    padding-right: 5px;
+  }
+
+  hr {
+    margin: 0;
+  }
+}
+
+.mdl-button {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !important;
+}
+
+.row .bg-profitGreen {
+  padding: 10px;
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.badge.badge-primary {
+  color: green !important;
+  background-color: transparent !important;
+}
+
+.badge.bg-profitGreen {
+  color: green !important;
+}
+
+.badge.bg-danger {
+  color: $red-color !important;
+}
+
+.profit-green.btn-success {
+  background: 0 0 !important;
+  border-radius: 2px !important;
+  position: relative !important;
+  height: 36px !important;
+  min-width: 64px !important;
+  padding: 0 8px !important;
+  display: inline-block !important;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0 !important;
+  overflow: hidden !important;
+  will-change: box-shadow, transform !important;
+  -webkit-transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1) !important;
+  transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1) !important;
+  outline: none !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  line-height: 36px !important;
+  vertical-align: middle !important;
+  color: #1fa2e1 !important;
+  box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, .12);
+  border: 1px solid #f3f3f3 !important;
+}
+
+.thumb.trades-thumb {
+  background-color: transparent !important;
+  p, h5 {
+    color: #000 !important;
+  }
+}
+
+.feeds.wall-ad, #topBanner, #tlcbar { // Removing the adds, and the happy birthday bar, it's so annoying
+  display: none !important;
+}
