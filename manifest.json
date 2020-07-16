@@ -18,7 +18,7 @@
   "content_scripts": [
     {
       "matches": ["https://standard.tradezeroweb.co/*"],
-      "css": ["assets/newprofitly.css"],
+      "css": ["assets/styles.css"],
       "js": ["assets/jquery-3.3.1.min.js", "index.js"]
     }
   ],
